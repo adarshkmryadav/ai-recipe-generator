@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# Generative AI Recipe Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This application is a serverless web app built using **AWS Amplify** and powered by **Amazon Bedrock** with the **Claude 3 Sonnet foundation model**. Users can input ingredients, and the app generates recipes based on those inputs. The architecture consists of a user-friendly HTML frontend and a serverless backend to handle AI-generated recipe requests.
 
-Currently, two official plugins are available:
+## Features
+- **Serverless**: Built using AWS Amplify for frontend hosting and AWS Lambda for backend logic.
+- **AI-Powered**: Recipes generated using Amazon Bedrock's Claude 3 Sonnet foundation model.
+- **Integrated Frontend and Backend**: Communication via AWS AppSync and Amplify Data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Architecture
+- **Frontend**: Hosted on AWS Amplify with continuous deployment from GitHub.
+- **Backend**: AWS Lambda for serverless functions, with API built using AWS AppSync.
+- **AI Model**: Amazon Bedrock foundation model for recipe generation.
+- **Authentication**: Managed with AWS Cognito.
 
-## Expanding the ESLint configuration
+## Prerequisites
+To use or modify this project, you'll need:
+- **AWS account** (with administrator-level access).
+- **Node.js** and **npm** installed locally.
+- **GitHub account**.
+- **AWS CLI** configured.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
+Follow the official AWS deployment documentation to clone, configure, and deploy the app:
+[Build a Serverless Web Application Using AWS Amplify, Lambda, Amazon Bedrock, and Cognito](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-amplify-bedrock-cognito-gen-ai/)
 
-- Configure the top-level `parserOptions` property like this:
+This guide includes:
+1. **Setting up the frontend** with AWS Amplify.
+2. **Configuring authentication** with AWS Cognito.
+3. **Deploying the backend** with AWS Lambda and AppSync.
+4. **Connecting the frontend to the backend**.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Clean Up
+To remove resources created during deployment, refer to the clean-up instructions in the [AWS tutorial](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-amplify-bedrock-cognito-gen-ai/).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Conclusion
+This project demonstrates how to create a serverless web application using AWS services and generative AI. Feel free to explore, modify, and contribute to the application. Happy coding!
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Last Updated: July 19, 2024
