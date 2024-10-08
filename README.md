@@ -38,5 +38,3 @@ To remove resources created during deployment, refer to the clean-up instruction
 This project demonstrates how to create a serverless web application using AWS services and generative AI. Feel free to explore, modify, and contribute to the application. Happy coding!
 
 ---
-
-### Last Updated: July 19, 2024
