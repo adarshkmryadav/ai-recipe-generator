@@ -3,6 +3,11 @@
 ## Overview
 This application is a serverless web app built using **AWS Amplify** and powered by **Amazon Bedrock** with the **Claude 3 Sonnet foundation model**. Users can input ingredients, and the app generates recipes based on those inputs. The architecture consists of a user-friendly HTML frontend and a serverless backend to handle AI-generated recipe requests.
 
+## Demo
+![Demo](https://github.com/user-attachments/assets/e808d29d-7f00-4d50-927c-f91c447083ff)
+
+
+
 ## Features
 - **Serverless**: Built using AWS Amplify for frontend hosting and AWS Lambda for backend logic.
 - **AI-Powered**: Recipes generated using Amazon Bedrock's Claude 3 Sonnet foundation model.
